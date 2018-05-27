@@ -3,4 +3,4 @@ execute as @e[tag=mpsout,tag=!tickdone] run scoreboard players operation @s MPSc
 tp @s ~ ~ ~ facing entity @e[tag=mpsout,scores={MPScableidtemp=0},tag=!tickdone,limit=1]
 execute if entity @e[tag=mpsout,scores={MPScableidtemp=0},tag=!tickdone] run function mps:cableline
 tag @s add tickdone
-execute if entity @e[tag=mpsin,tag=!tickdone] run function mps:cabletarget
+execute if entity @e[tag=mpsin,tag=!tickdone] as @e[tag=mpsin,tag=!tickdone,limit=1] at @s run function mps:cabletarget
