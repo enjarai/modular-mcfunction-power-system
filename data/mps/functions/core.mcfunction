@@ -8,3 +8,5 @@ function mps:placecable
 execute as @e[tag=mpsin,tag=unlinked] at @s if entity @e[tag=mpsout,tag=unlinked,limit=1,sort=nearest,distance=..10] run function mps:linkcable
 
 function mps:delcable
+
+execute as @e[tag=unlinked] at @s run particle minecraft:dragon_breath ~ ~ ~ 0 0 0 0.01 1
